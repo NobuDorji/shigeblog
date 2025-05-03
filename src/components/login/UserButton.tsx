@@ -31,22 +31,22 @@ export default function UserButton({ image, size = 40 }: Props) {
       </button>
 
       {isMenuOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-gray-900 text-white rounded-lg shadow-lg z-50">
-          <div className="p-4 border-b border-gray-700">
-            <p className="text-sm font-semibold text-white break-words">
-              {session?.user?.email ?? "no-email@example.com"}
-            </p>
-          </div>
-          <ul className="p-4 space-y-3">
-            <li>
-              <a href="/mypage" className="hover:underline">マイページ</a>
-            </li>
-            <li>
-              <LogoutButton />
-            </li>
-          </ul>
-        </div>
-      )}
+  <div className="absolute right-0 mt-2 w-64 bg-gray-900 text-white rounded-lg shadow-lg z-50">
+    <div className="p-4 border-b border-gray-700">
+      <p className="text-sm font-semibold text-white truncate">
+        {session?.user?.email ?? "no-email@example.com"}
+      </p>
+    </div>
+    <ul className="p-4 space-y-3">
+      <li>
+        <a href="/mypage" className="hover:underline">マイページ</a>
+      </li>
+      <li>
+        <LogoutButton />
+      </li>
+    </ul>
+  </div>
+)}
     </div>
   )
 }
